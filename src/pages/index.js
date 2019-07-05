@@ -14,7 +14,7 @@ import { graphql } from "gatsby";
 
 const IndexPage = ({data}) => {
   console.log('data :', data);
-  const localeData = data.multi.edges.find(item => item.node.node_locale  === 'en-US'); // FIXME
+  const localeData = data.multi.edges.find(item => item.node.node_locale  === 'zh-Hans'); // FIXME
   console.log('localeData :', localeData);
 
   return (
