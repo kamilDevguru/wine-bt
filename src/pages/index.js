@@ -34,8 +34,13 @@ const IndexPage = ({data}) => {
             description={localeData.node.pageDescription.text.text}
             companyMarks={localeData.node.companies.companyMarks}
           />
-          <Step />
-          <Snapshot />
+          <Step
+            steps={localeData.node.stepOfShipping.steps}
+          />
+          <Snapshot
+            title={localeData.node.snapshot.title}
+            items={localeData.node.snapshot.stepItems}
+          />
         </Col>
         <Col className="index__quote" xl={4} lg={8} md={8} sm={12}>
           <PriceQuote
@@ -127,6 +132,26 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+          
+          stepOfShipping {
+            steps {
+              text
+              icon {
+                resolutions {
+                  src
+                }
+              }
+            }
+          }
+
+          snapshot {
+            stepItems {
+              text {
+                text
+              }
+            }
+            title
           }
         }
       }

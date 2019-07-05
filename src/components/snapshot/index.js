@@ -2,31 +2,18 @@ import React from "react"
 
 import "./style.scss"
 
-const BreadCrumb = () => {
+const BreadCrumb = (props) => {
   return (
     <div className="snapshot__container">
       <h2 className="snapshot__title">
-        Snapshot of China's wine imports
+        {props.title}
       </h2>
       <ul className="snapshot__list">
-        <li>
-          China has cemented its position in the top five wine
-          import markets over the past four years, currently
-          sitting in fourth place behind Germany, the United
-          Kingdom, then the United States. 
-        </li>
-        <li>
-          China has cemented its position in the top five wine
-          import markets over the past four years, currently
-          sitting in fourth place behind Germany, the United
-          Kingdom, then the United States. 
-        </li>
-        <li>
-          China has cemented its position in the top five wine
-          import markets over the past four years, currently
-          sitting in fourth place behind Germany, the United
-          Kingdom, then the United States. 
-        </li>
+        {props.items.map((item, index) => (
+          <li key={index}>
+            {item.text.text}
+          </li>
+        ))}
       </ul>
       <h3 className="snapshot__subtitle">
         Rich text block [h3]
