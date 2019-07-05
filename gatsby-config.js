@@ -1,11 +1,15 @@
-require(`dotenv`).config({ path: `.env` })
+const languages = require('./src/data/languages');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = {
-  pathPrefix: "/gatsby-react-bootstrap-starter",
+  pathPrefix: "/gatsby-react-bootstrap-wine",
   siteMetadata: {
-    title: `Gatsby React Bootstrap Starter`,
-    description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
+    title: `Wine export web application`,
+    description: `This is wine test project using contentful and i18n.`,
     author: `Kamil Czoska`,
+    languages,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

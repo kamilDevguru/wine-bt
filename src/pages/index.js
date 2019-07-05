@@ -1,5 +1,8 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
+import { graphql } from "gatsby"
+
+import { getUserLangKey } from 'ptz-i18n'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,12 +13,12 @@ import PriceQuote from "../components/priceQuote"
 import Step from "../components/step"
 import Snapshot from "../components/snapshot"
 import Testimonial from "../components/testimonial"
-import { graphql } from "gatsby";
 
 const IndexPage = ({data}) => {
-  console.log('data :', data);
-  const localeData = data.multi.edges.find(item => item.node.node_locale  === 'zh-Hans'); // FIXME
-  console.log('localeData :', localeData);
+  const { langs, defaultLangKey } = data.site.siteMetadata.languages;
+  const langKey = getUserLangKey(langs, defaultLangKey);
+  console.log('langKey :', langKey);
+  const localeData = data.multi.edges.find(item => item.node.node_locale  === langKey); // FIXME
 
   return (
     <Layout pageInfo={{ pageName: "index" }}>
@@ -63,6 +66,15 @@ export default IndexPage
 
 export const pageQuery = graphql`
   {
+    site {
+      siteMetadata{
+        languages {
+          defaultLangKey
+          langs
+        }
+      }
+    }
+
     single: allContentfulTestPage(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
