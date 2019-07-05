@@ -4,9 +4,10 @@ import { Button } from "react-bootstrap"
 
 import "./style.scss"
 
-const Hero = () => {
+const Hero = ({src}) => {
   return (
     <div className="hero__container">
+      <img className="hero__image" src={src} alt="hero" />
       <h1 className="hero__title">
         Export and ship wine to China
       </h1>

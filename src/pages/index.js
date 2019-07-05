@@ -9,11 +9,14 @@ import Intro from "../components/Intro"
 import PriceQuote from "../components/priceQuote"
 import Step from "../components/step"
 import Snapshot from "../components/snapshot"
+import { graphql } from "gatsby";
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout pageInfo={{ pageName: "index" }}>
     <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} />
-    <Hero />
+    <Hero
+      src={data.img.image.resolutions.src}
+    />
     <BreadCrumb />
     <Row className="index__row">
       <Col className="index__intro" xl={8} lg={8} md={8} sm={12}>
@@ -29,3 +32,15 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query imageQuery {
+    img: contentfulBackgroundImage {
+      image {
+        resolutions {
+          src
+        }
+      }
+    }
+  }
+`

@@ -1,14 +1,19 @@
 .hero__container {
   height: 640px;
   width: 100%;
-  background-image: url(./asset/hero.jpg);
   background-size: cover;
+
+  .hero__image {
+    min-width: 100%;
+    height: 640px;
+  }
 }
 
 .hero__title {
-  width: 811px;
-  margin-left: 100px;
-  padding-top: 141px;
+  position: absolute;
+  max-width: 811px;
+  top: 141px;
+  left: 10vw;
   font-family: GraphikBold;
   font-size: 80px;
   line-height: 80px;
@@ -17,9 +22,10 @@
 }
 
 .hero__subtitle {
-  width: 640px;
-  margin-left: 100px;
-  margin-top: 32px;
+  position: absolute;
+  max-width: 640px;
+  top: 323px;
+  left: 10vw;
   font-family: GraphikRegular;
   font-size: 24px;
   line-height: 32px;
@@ -27,13 +33,14 @@
 }
 
 .hero__action {
+  position: absolute;
   width: 180px;
   height: 56px;
-  margin-left: 100px;
-  margin-top: 48px;
+  top: 443px;
+  left: 10vw;
   background-color: #FFFDFD;
   font-size: 17px;
-  font-family: GraphikRegular; // FIXME
+  font-family: GraphikBold; // FIXME
   color: #000000;
   border: none;
   border-radius: 8px;
