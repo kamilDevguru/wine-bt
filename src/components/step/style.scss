@@ -1,22 +1,40 @@
-.breadcrumb__container {
-  width: 165px;
-  margin-left: 81px;
-  margin-top: 40px; // FIXME
+.step__container {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #DDDDDD;
 
-  .breadcrumb__link {
-    font-family: GraphikRegular;
-    font-size: 14px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #FA5959;
-  }
-
-  .active {
+  .step__title {
+    margin-bottom: 26px;
+    font-family: GraphikBold;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
     color: black;
   }
 
-  .breadcrumb__marker {
-    color: black;
-    margin: 0 5px;
+  .step__item {
+    margin: 20px 0;
+    width: 800px;
+    height: 120px;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 24px 48px;
+
+    img {
+      widows: 84px;
+    }
+
+    .step__text {
+      margin-left: 45px;
+      padding: 20px 0;
+      font-family: GraphikRegular;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      color: black;
+    }
   }
 }

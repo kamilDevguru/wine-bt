@@ -1,16 +1,44 @@
 import React from "react"
-import { Button } from "react-bootstrap"
 
+import ShipMark from "./image/ship-mark.png"
 import "./style.scss"
 
 const BreadCrumb = () => {
   return (
-    <div className="breadcrumb__container">
-      <a className="breadcrumb__link" href="#">Home</a>
-      <span className="breadcrumb__marker">›</span>
-      <a className="breadcrumb__link" href="#">Solutions</a>
-      <span className="breadcrumb__marker">›</span>
-      <a className="breadcrumb__link active" href="#">Wine</a>
+    <div className="step__container">
+      <h2 className="step__title">
+        Everything you need to ship wine to China
+      </h2>
+      <div className="step__sub-container">
+        <div className="step__item">
+          <img src={ShipMark} alt="mark" />
+          <span className="step__text">
+            Outbound freight forwarding by air or sea
+          </span>
+        </div>
+        
+        <div className="step__item">
+          <img src={ShipMark} alt="mark" />
+          <span className="step__text">
+            Outbound freight forwarding by air or sea
+          </span>
+        </div>
+        
+        <div className="step__item">
+          <img src={ShipMark} alt="mark" />
+          <span className="step__text">
+            Outbound freight forwarding by air or sea
+          </span>
+        </div>
+        
+        <div className="step__item">
+          <img src={ShipMark} alt="mark" />
+          <span className="step__text">
+            Outbound freight forwarding by air or sea
+          </span>
+        </div>
+        
+      </div>
     </div>
   )
 }

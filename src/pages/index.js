@@ -7,6 +7,7 @@ import Hero from "../components/hero"
 import BreadCrumb from "../components/breadCrumb"
 import Intro from "../components/intro"
 import PriceQuote from "../components/priceQuote"
+import Step from "../components/step"
 import Snapshot from "../components/snapshot"
 
 const IndexPage = () => (
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Row className="index__row">
       <Col className="index__intro" lg={8} md={8} sm={12}>
         <Intro />
+        <Step />
         <Snapshot />
       </Col>
       <Col className="index__quote" lg={4} md={4} sm={12}>
