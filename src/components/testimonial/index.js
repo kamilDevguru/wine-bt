@@ -1,18 +1,68 @@
 import React from "react"
-import { Button } from "react-bootstrap"
+import { Carousel } from "react-bootstrap"
 
 import "./style.scss"
 
-const BreadCrumb = () => {
-  return (
-    <div className="breadcrumb__container">
-      <a className="breadcrumb__link" href="#">Home</a>
-      <span className="breadcrumb__marker">›</span>
-      <a className="breadcrumb__link" href="#">Solutions</a>
-      <span className="breadcrumb__marker">›</span>
-      <a className="breadcrumb__link active" href="#">Wine</a>
-    </div>
-  )
+class Testimonial extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      index: 0,
+      direction: null,
+    };
+  }
+
+  handleSelect = (selectedIndex, e) => {
+    this.setState({
+      index: selectedIndex,
+      direction: e.direction,
+    });
+  }
+
+  render() {
+    const { index, direction } = this.state;
+    const { quotes } = this.props;
+
+    return (
+      <div className="testimonial__container">
+        <Carousel
+          activeIndex={index}
+          direction={direction}
+          className="testimonial__quote"
+          controls={false}
+          indicators={false}
+          fade={true}
+          slide={false}
+          interval={10000}
+          onSelect={this.handleSelect}
+        >
+          {quotes.map(quote => (
+            <Carousel.Item>
+              <p>{quote.text.text}</p>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+        <Carousel
+          activeIndex={index}
+          direction={direction}
+          className="testimonial__person"
+          controls={false}
+          indicators={false}
+          fade={true}
+          slide={false}
+          interval={10000}
+          onSelect={this.handleSelect}
+        >
+          {quotes.map(quote => (
+            <Carousel.Item>
+              <p>{quote.title}</p>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+    );
+  }
 }
 
-export default BreadCrumb
+export default Testimonial

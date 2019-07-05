@@ -9,6 +9,7 @@ import Intro from "../components/Intro"
 import PriceQuote from "../components/priceQuote"
 import Step from "../components/step"
 import Snapshot from "../components/snapshot"
+import Testimonial from "../components/testimonial"
 import { graphql } from "gatsby";
 
 const IndexPage = ({data}) => {
@@ -49,6 +50,9 @@ const IndexPage = ({data}) => {
             buttonLink={localeData.node.ctaBlock.action.href}
             bottonIcon={localeData.node.ctaBlock.action.buttonIcon.resolutions.src}
             quotes={localeData.node.ctaBlock.priceQuotes.quoteItems}
+          />
+          <Testimonial
+            quotes={localeData.node.testimonial.tesimonials}
           />
         </Col>
       </Row>
@@ -152,6 +156,15 @@ export const pageQuery = graphql`
               }
             }
             title
+          }
+
+          testimonial {
+            tesimonials {
+              title
+              text {
+                text
+              }
+            }
           }
         }
       }

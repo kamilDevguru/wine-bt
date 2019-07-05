@@ -1,22 +1,21 @@
-.breadcrumb__container {
-  width: 165px;
-  margin-left: 81px;
-  margin-top: 40px; // FIXME
+.testimonial__container {
+  position: relative;
+  height: 200px;
 
-  .breadcrumb__link {
-    font-family: GraphikRegular;
-    font-size: 14px;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #FA5959;
+  .testimonial__quote {
+    position: absolute;
+    bottom: 42px;
+    right: 0px;
+    box-sizing: border-box;
+    padding: 11px 20px 20px 11px;
+    background-image: url(./image/Union.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
-  .active {
-    color: black;
-  }
-
-  .breadcrumb__marker {
-    color: black;
-    margin: 0 5px;
+  .testimonial__person {
+    position: absolute;
+    top: 170px;
+    right: 0px;
   }
 }
