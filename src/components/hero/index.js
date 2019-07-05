@@ -1,21 +1,24 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { navigate } from "gatsby"
 import { Button } from "react-bootstrap"
 
 import "./style.scss"
 
-const Hero = ({src}) => {
+const Hero = (props) => {
   return (
     <div className="hero__container">
-      <img className="hero__image" src={src} alt="hero" />
+      <img className="hero__image" src={props.src} alt="hero" />
       <h1 className="hero__title">
-        Export and ship wine to China
+        {props.title}
       </h1>
       <p className="hero__subtitle">
-        Cstar is the digital wine fulfilment and logistics solution for China-bound exports
+        {props.subtitle}
       </p>
-      <Button className="hero__action">
-        Schedule a Demo
+      <Button
+        className="hero__action"
+        onClick={() => navigate(props.buttonLink)}
+      >
+        {props.buttonTitle}
       </Button>
     </div>
   )

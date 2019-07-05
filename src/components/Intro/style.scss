@@ -1,6 +1,6 @@
 .intro__container {
   margin-left: 81px;
-  max-width: 800px;
+  max-width: 900px;
   padding-top: 5px;
 
   .intro__title {
@@ -48,7 +48,7 @@
   }
 
   .intro__company-container {
-    max-width: 800px;
+    max-width: 900px;
     margin-top: 29px;
     padding-bottom: 48px;
     border-bottom: 1px solid #DDDDDD;
@@ -62,7 +62,8 @@
       margin: 9px;
 
       img {
-        margin: 12px 4px;
+        height: 71px;
+        margin: 8px auto;
       }
     }
   }
