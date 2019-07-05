@@ -16,12 +16,12 @@ const IndexPage = () => (
     <Hero />
     <BreadCrumb />
     <Row className="index__row">
-      <Col className="index__intro" lg={8} md={8} sm={12}>
+      <Col className="index__intro" xl={8} lg={8} md={8} sm={12}>
         <Intro />
         <Step />
         <Snapshot />
       </Col>
-      <Col className="index__quote" lg={4} md={4} sm={12}>
+      <Col className="index__quote" xl={4} lg={8} md={8} sm={12}>
         <PriceQuote />
       </Col>
     </Row>
