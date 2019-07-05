@@ -11,7 +11,7 @@ const Intro = (props) => {
       </h1>
       <Row className="intro__item-container">
         {props.services.map((service, index) => (
-          <Col sm={12} md={6} lg={index % 3 === 1 ? 5 : index % 3 === 2 ? 3 : 4} className="intro__item">
+          <Col key={index} sm={12} md={6} lg={index % 3 === 1 ? 5 : index % 3 === 2 ? 3 : 4} className="intro__item">
             <img src={service.icon.resolutions.src} alt="mark" />
             <span className="intro__item-txt">{service.text}</span>
           </Col>
@@ -21,8 +21,8 @@ const Intro = (props) => {
         {props.description}
       </p>
       <Row className="intro__company-container">
-        {props.companyMarks.map(com => (
-          <Col className="intro__company-item" sm={12} md={6} lg={3}>
+        {props.companyMarks.map((com, index) => (
+          <Col key={index} className="intro__company-item" sm={12} md={6} lg={3}>
             <img src={com.mark.resolutions.src} alt="company" />
           </Col>          
         ))}

@@ -38,7 +38,13 @@ const IndexPage = ({data}) => {
           <Snapshot />
         </Col>
         <Col className="index__quote" xl={4} lg={8} md={8} sm={12}>
-          <PriceQuote />
+          <PriceQuote
+            title={localeData.node.ctaBlock.title}
+            buttonTitle={localeData.node.ctaBlock.action.title}
+            buttonLink={localeData.node.ctaBlock.action.href}
+            bottonIcon={localeData.node.ctaBlock.action.buttonIcon.resolutions.src}
+            quotes={localeData.node.ctaBlock.priceQuotes.quoteItems}
+          />
         </Col>
       </Row>
     </Layout>
@@ -96,6 +102,28 @@ export const pageQuery = graphql`
               mark {
                 resolutions {
                   src
+                }
+              }
+            }
+          }
+          ctaBlock {
+            title
+            action {
+              title
+              href
+              buttonIcon {
+                resolutions {
+                  src
+                }
+              }
+            }
+            priceQuotes {
+              quoteItems {
+                text
+                icon {
+                  resolutions {
+                    src
+                  }
                 }
               }
             }
