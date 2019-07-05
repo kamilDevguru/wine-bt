@@ -24,12 +24,12 @@ const Layout = ({ children, pageInfo }) => (
         }
       }
     `}
-    render={data => (
+    render={() => (
       <>
         <Container fluid className="px-0 main">
           <Row noGutters className="justify-content-center">
             <Col>
-              <Header siteTitle={data.site.siteMetadata.title} />
+              <Header />
             </Col>
           </Row>
           <Navbar pageInfo={pageInfo} />
