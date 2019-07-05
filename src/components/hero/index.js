@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { Button } from "react-bootstrap"
 
 import "./style.scss"

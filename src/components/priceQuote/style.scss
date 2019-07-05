@@ -1,0 +1,22 @@
+.breadcrumb__container {
+  width: 165px;
+  margin-left: 81px;
+  margin-top: 40px; // FIXME
+
+  .breadcrumb__link {
+    font-family: GraphikRegular;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #FA5959;
+  }
+
+  .active {
+    color: black;
+  }
+
+  .breadcrumb__marker {
+    color: black;
+    margin: 0 5px;
+  }
+}
