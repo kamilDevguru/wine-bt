@@ -17,8 +17,7 @@ import Testimonial from "../components/testimonial"
 const IndexPage = ({data}) => {
   const { langs, defaultLangKey } = data.site.siteMetadata.languages;
   const langKey = getUserLangKey(langs, defaultLangKey);
-  console.log('langKey :', langKey);
-  const localeData = data.multi.edges.find(item => item.node.node_locale  === langKey); // FIXME
+  const localeData = data.multi.edges.find(item => item.node.node_locale.includes(langKey)); // FIXME
 
   return (
     <Layout pageInfo={{ pageName: "index" }}>

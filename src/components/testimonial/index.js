@@ -37,8 +37,8 @@ class Testimonial extends React.Component {
           interval={10000}
           onSelect={this.handleSelect}
         >
-          {quotes.map(quote => (
-            <Carousel.Item>
+          {quotes.map((quote, ix) => (
+            <Carousel.Item key={ix}>
               <p>{quote.text.text}</p>
             </Carousel.Item>
           ))}
@@ -54,8 +54,8 @@ class Testimonial extends React.Component {
           interval={10000}
           onSelect={this.handleSelect}
         >
-          {quotes.map(quote => (
-            <Carousel.Item>
+          {quotes.map((quote, ix) => (
+            <Carousel.Item key={ix}>
               <p>{quote.title}</p>
             </Carousel.Item>
           ))}
