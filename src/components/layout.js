@@ -7,11 +7,9 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
 import { Container, Row, Col } from "react-bootstrap"
 
 import Header from "./header"
-import Navbar from "./navBar"
 
 const Layout = ({ children, pageInfo }) => (
   <StaticQuery
@@ -32,12 +30,9 @@ const Layout = ({ children, pageInfo }) => (
               <Header />
             </Col>
           </Row>
-          <Navbar pageInfo={pageInfo} />
           <Row noGutters>
             <Col>
-              <Container className="mt-5">
-                <main>{children}</main>
-              </Container>
+              {children}
             </Col>
           </Row>
         </Container>

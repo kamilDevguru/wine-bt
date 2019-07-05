@@ -1,0 +1,40 @@
+.hero__container {
+  height: 640px;
+  width: 100%;
+  background-image: url(./asset/hero.jpg);
+  background-size: cover;
+}
+
+.hero__title {
+  width: 811px;
+  margin-left: 100px;
+  padding-top: 141px;
+  font-family: GraphikBold;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.hero__subtitle {
+  width: 640px;
+  margin-left: 100px;
+  margin-top: 32px;
+  font-family: GraphikRegular;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.hero__action {
+  width: 180px;
+  height: 56px;
+  margin-left: 100px;
+  margin-top: 48px;
+  background-color: #FFFDFD;
+  font-size: 17px;
+  font-family: GraphikRegular; // FIXME
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+}
