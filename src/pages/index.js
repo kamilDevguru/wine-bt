@@ -7,6 +7,7 @@ import Hero from "../components/hero"
 import BreadCrumb from "../components/breadCrumb"
 import Intro from "../components/intro"
 import PriceQuote from "../components/priceQuote"
+import Snapshot from "../components/snapshot"
 
 const IndexPage = () => (
   <Layout pageInfo={{ pageName: "index" }}>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Row className="index__row">
       <Col className="index__intro" lg={8} md={8} sm={12}>
         <Intro />
+        <Snapshot />
       </Col>
       <Col className="index__quote" lg={4} md={4} sm={12}>
         <PriceQuote />

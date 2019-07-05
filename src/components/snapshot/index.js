@@ -1,16 +1,42 @@
 import React from "react"
-import { Button } from "react-bootstrap"
 
 import "./style.scss"
 
 const BreadCrumb = () => {
   return (
-    <div className="breadcrumb__container">
-      <a className="breadcrumb__link" href="#">Home</a>
-      <span className="breadcrumb__marker">›</span>
-      <a className="breadcrumb__link" href="#">Solutions</a>
-      <span className="breadcrumb__marker">›</span>
-      <a className="breadcrumb__link active" href="#">Wine</a>
+    <div className="snapshot__container">
+      <h2 className="snapshot__title">
+        Snapshot of China's wine imports
+      </h2>
+      <ul className="snapshot__list">
+        <li>
+          China has cemented its position in the top five wine
+          import markets over the past four years, currently
+          sitting in fourth place behind Germany, the United
+          Kingdom, then the United States. 
+        </li>
+        <li>
+          China has cemented its position in the top five wine
+          import markets over the past four years, currently
+          sitting in fourth place behind Germany, the United
+          Kingdom, then the United States. 
+        </li>
+        <li>
+          China has cemented its position in the top five wine
+          import markets over the past four years, currently
+          sitting in fourth place behind Germany, the United
+          Kingdom, then the United States. 
+        </li>
+      </ul>
+      <h3 className="snapshot__subtitle">
+        Rich text block [h3]
+      </h3>
+      <p className="snapshot__text">
+        China has cemented its position in the top five wine
+        import markets over the past four years, currently
+        sitting in fourth place behind Germany, the United
+        Kingdom, then the United States. 
+      </p>
     </div>
   )
 }
