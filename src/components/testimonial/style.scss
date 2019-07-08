@@ -6,10 +6,10 @@
 
   .testimonial__quote {
     position: absolute;
-    bottom: 48px;
+    bottom: 16px;
     right: 0px;
     box-sizing: border-box;
-    padding: 11px 28px 20px 11px;
+    padding: 15px;
     background-image: url(./image/Union.png);
     background-size: 100% 90%;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 
   .testimonial__person {
     position: absolute;
-    top: 170px;
+    top: 180px;
     right: 0px;
   }
 }
