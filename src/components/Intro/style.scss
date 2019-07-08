@@ -1,5 +1,4 @@
 .intro__container {
-  margin-left: 81px;
   max-width: 900px;
   padding-top: 5px;
 
@@ -16,13 +15,14 @@
   .intro__item-container {
     margin-top: 32px;
     padding: 28px 0;
-    max-width: 800px;
+    max-width: 900px;
     border-top: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
 
     .intro__item {
       height: 30px;
       text-align: left;
+      padding: 0px;
 
       img {
         width: 28px;
@@ -54,6 +54,7 @@
     border-bottom: 1px solid #DDDDDD;
 
     .intro__company-item {
+      max-width: 222.22px;
       height: 88px;
       border: 1px solid #DDDDDD;
       box-sizing: border-box;
@@ -65,6 +66,10 @@
         height: 71px;
         margin: 8px auto;
       }
+    }
+
+    .intro__first-item {
+      margin-left: 0px;
     }
   }
 }

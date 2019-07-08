@@ -1,10 +1,12 @@
 import React from "react"
+import { Row } from "react-bootstrap"
 
 import "./style.scss"
 
 const BreadCrumb = (props) => {
   return (
-    <div className="step__container">
+    <Row className="step__container">
+
       <h2 className="step__title">
         Everything you need to ship wine to China
       </h2>
@@ -18,7 +20,7 @@ const BreadCrumb = (props) => {
           </div>
         ))}
       </div>
-    </div>
+    </Row>
   )
 }
 

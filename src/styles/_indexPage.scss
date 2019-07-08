@@ -1,11 +1,13 @@
 .index__row {
   margin: 0px;
-  justify-content: center;
 }
 
 .index__intro {
+  margin-left: calc(10vw + 15px);
   max-width: 900px;
   padding-top: 35px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .index__quote {
